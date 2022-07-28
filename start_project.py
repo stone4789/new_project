@@ -52,6 +52,51 @@ def start_project():
             "MODEL_OUTPUT = ",
         ],
     )
+    write_boilerplate_files(
+        "./new_project/src/project_test.py",
+        ["'''This is a new project, insert tests here'''", "import pytest"],
+    )
+    write_boilerplate_files(
+        "./new_project/src/requirements.txt",
+        ["'''This is a new project, insert docker requirements here'''"],
+    )
+    write_boilerplate_files(
+        "./new_project/README.txt",
+        ["'''This is a new project, a description will be found here...later'''"],
+    )
+    write_boilerplate_files(
+        "./new_project/src/train.py",
+        [
+            "import joblib",
+            "import pytest",
+            "from sklearn import metrics",
+            "import xgboost as xgb",
+            "from sklearn import preprocessing",
+            "import numpy as np",
+            "import matplotlib.pyplot as plt",
+            "%matplotlib inline",
+            "import pandas as pd",
+        ],
+    )
+    write_boilerplate_files(
+        "./new_project/notebooks/exploration.ipynb",
+        [
+            "import pandas as pd",
+            "import numpy as np",
+            "import matplotlib.pyplot as plt",
+            "%matplotlib inline" "import seaborn as sns",
+        ],
+    )
+    write_boilerplate_files(
+        "./new_project/notebooks/check_data.ipynb",
+        [
+            "import numpy as np",
+            "import pandas as pd",
+            "import matplotlib.pyplot as plt",
+            "%matplotlib inline",
+            "import seaborn as sns",
+        ],
+    )
 
 
 if __name__ == "__main__":
