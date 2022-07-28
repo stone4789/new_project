@@ -37,8 +37,21 @@ def start_project():
     def write_boilerplate_files(location: str, boilerplate: list):
         newFile = open(location, "w")
         for i in boilerplate:
+            i += "\n"
             newFile.write(i)
         newFile.close()
+
+    write_boilerplate_files(
+        "./new_project/src/config.py",
+        [
+            "'''This is a new project, insert config here'''",
+            "import os",
+            "HOME_DIR = ",
+            "MODEL_PATH = ",
+            "TRAINING_FILE = ",
+            "MODEL_OUTPUT = ",
+        ],
+    )
 
 
 if __name__ == "__main__":
