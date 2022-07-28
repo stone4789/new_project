@@ -29,12 +29,10 @@ def start_project():
     path3 = os.path.join("new_project", "src")
     path4 = os.path.join("new_project", "notebooks")
     path5 = os.path.join("new_project", "models")
+    path_list = [path1, path2, path3, path4, path5]
 
-    os.makedirs(path1)
-    os.makedirs(path2)
-    os.makedirs(path3)
-    os.makedirs(path4)
-    os.makedirs(path5)
+    for i in path_list:
+        os.makedirs(i)
 
 
 if __name__ == "__main__":
