@@ -84,7 +84,8 @@ def start_project():
             "import pandas as pd",
             "import numpy as np",
             "import matplotlib.pyplot as plt",
-            "%matplotlib inline" "import seaborn as sns",
+            "%matplotlib inline",
+            "import seaborn as sns",
         ],
     )
     write_boilerplate_files(
