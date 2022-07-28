@@ -29,10 +29,16 @@ def start_project():
     path3 = os.path.join("new_project", "src")
     path4 = os.path.join("new_project", "notebooks")
     path5 = os.path.join("new_project", "models")
-    path_list = [path1, path2, path3, path4, path5]
+    pathList = [path1, path2, path3, path4, path5]
 
-    for i in path_list:
+    for i in pathList:
         os.makedirs(i)
+
+    def write_boilerplate_files(location: str, boilerplate: list):
+        newFile = open(location, "w")
+        for i in boilerplate:
+            newFile.write(i)
+        newFile.close()
 
 
 if __name__ == "__main__":
