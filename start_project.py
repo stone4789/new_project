@@ -99,6 +99,16 @@ def start_project():
         ],
     )
 
+    write_boilerplate_files(
+        "./new_project/Makefile.win",
+        [
+            "install:\n\t pip install --upgrade pip &&\
+            pip install -r requirements.txt",
+            "lint:",
+            "test:",
+        ],
+    )
+
 
 if __name__ == "__main__":
     start_project()
